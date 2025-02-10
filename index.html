@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid avec Divs 1 à 13</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.min.css">
+</head>
+<style>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.atropos {
+    width: 60vh;
+    height: 60vh;
+    transform: scale(0.7);
+}
+
+.atropos-inner {
+    border-radius: 20px;
+    background-image: url("images/Parallax-1.png");
+}
+
+.card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-element {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.element-1 {
+    top: 20%;
+    left: 20%;
+}
+
+.element-2 {
+    bottom: 20%;
+    right: 20%;
+    width: 60px;
+    height: 60px;
+
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 500vh; 
+    background: url('images/fond-site.jpg') no-repeat center center;
+    background-size: cover;
+} 
+
+</style>
+
+
+<body>
+    <div class="grid-container">
+        <div class="div1">
+            <p><img src="images/pfp.jpg" alt="Photo-de-profil"></p>
+        </div>
+        <div class="div2">
+            <p></p>
+        </div>
+        <div class="div3">
+            <p>Contenu de la div 3</p>
+        </div>
+        <div class="div4">
+            <p>Contenu de la div 4</p>
+        </div>
+        <div class="div5">
+            <p>Contenu de la div 5</p>
+        </div>
+
+        <div class="div6">
+            <div class="container">
+                <div class="atropos my-atropos">
+                    <div class="atropos-scale">
+                        <div class="atropos-rotate">
+                            <div class="atropos-inner">
+                                <div class="card-content">
+                                    <div class="floating-element element-1" data-atropos-offset="5"></div>
+                                    <div class="floating-element element-2" data-atropos-offset="3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                      
+        </div>
+       
+        <div class="div7">
+            <h1>Une même image</h1>
+            <p>J'ai réalisée cette création a partir d'une image qui décrivez la parralaxe via des calculs assez théorique, je vous memts donc l'image en question.<br> <br> 
+                <img src="images/ParallaxeJPG.jpg" alt="Schéma-parallele" width="400px" height="155px">
+                </p>
+        </div>
+        <div class="div8">
+            <h1>Titre centré</h1>
+            <p>J'ai repris la mise en page de l'image suivante pour replacer des créations réaliser 1 à 1 dans les cases.</p>
+        </div>
+
+        <div class="div9">
+            <div class="container">
+                <div class="atropos my-atropos">
+                    <div class="atropos-scale">
+                        <div class="atropos-rotate">
+                            <div class="atropos-inner">
+                                <div class="card-content">
+                                    <div class="floating-element element-1" data-atropos-offset="5"></div>
+                                    <div class="floating-element element-2" data-atropos-offset="3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.min.js"></script>
+
+        <script>
+            if (typeof Atropos !== 'undefined') {
+                const myAtropos = Atropos({
+                    el: '.my-atropos',
+                    activeOffset: 40,
+                    shadowScale: 1.05,
+                    highlight: true,
+                    rotateXMax: 15,
+                    rotateYMax: 15,
+                    stretchX: 40,
+                    stretchY: 40,
+                });
+            } else {
+                console.error('Atropos library not loaded correctly');
+            }
+        </script>
+
+       <!-- <div class="div10">
+            <p>Contenu de la div 10</p>
+        </div>
+        <div class="div11">
+            <p>Contenu de la div 11</p>
+        </div>
+        <div class="div12">
+            <p>Contenu de la div 12</p>
+        </div>
+        <div class="div13">
+            <p>Contenu de la div 13</p>
+        </div>
+    </div>-->
+
+    <!--<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const myAtropos = Atropos({
+                el: '.my-atropos', // Sélecteur pour votre conteneur
+                activeOffset: 40, // Profondeur de l'effet
+                shadow: true,     // Activer une ombre pour l'effet de profondeur
+            });
+        });
+    </script>-->
+</body>
+</html>
